@@ -63,6 +63,17 @@ flutter:
     - assets/studenticon2.png
     - assets/ollieClear.png
     - assets/teacher.png
+    - assets/bright owl logo.jpg
+    - assets/logo.jpg
+    - assets/books.jpg
+    - assets/Pen.jpg
+    - assets/Math.jpg
+    - assets/Science.jpg
+    - assets/History.jpg
+    - assets/Writing.jpg
+    - assets/arrrows.jpg
+    - assets/Owl.jpg
+    - assets/question.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -80,6 +91,9 @@ flutter:
      fonts:
        - asset: fonts/Inter-VariableFont_slnt,wght.ttf
          weight: 900
+   - family: Montserrat
+     fonts:
+        - asset: fonts/Montserrat-VariableFont_wght.ttf
   
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

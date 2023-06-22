@@ -1,8 +1,8 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:brightowl_frontend/HomePage.dart';
 
 import 'package:flutter/material.dart';
-
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -126,8 +126,8 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                     const SizedBox(height: 20),
                     Container(
-                        padding:
-                            const EdgeInsets.only(top: 5.0, left: 20.0, right: 20.0),
+                        padding: const EdgeInsets.only(
+                            top: 5.0, left: 20.0, right: 20.0),
                         alignment: Alignment.center,
                         child: Checkbox(
                           value: isChecked,
@@ -168,7 +168,12 @@ class _SignupScreenState extends State<SignupScreen> {
                         children: <Widget>[
                           //Text('Need to make an account? '),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () => {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const HomePage()))
+                            },
                             child: const Text(
                               'Log in?',
                               style: TextStyle(
