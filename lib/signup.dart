@@ -1,3 +1,4 @@
+import 'package:brightowl_frontend/login.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:brightowl_frontend/HomePage.dart';
@@ -107,7 +108,12 @@ class _SignupScreenState extends State<SignupScreen> {
                       width: double.infinity,
                       height: 50,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () => {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const HomePage()))
+                            },
                         child: const Text(
                           'Create Account',
                           style: TextStyle(color: Colors.white),
@@ -172,7 +178,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const HomePage()))
+                                      builder: (context) => LoginScreen()))
                             },
                             child: const Text(
                               'Log in?',

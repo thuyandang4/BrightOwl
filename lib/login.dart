@@ -1,4 +1,7 @@
+import 'package:brightowl_frontend/signup.dart';
 import 'package:flutter/material.dart';
+
+import 'HomePage.dart';
 
 void main() {
   runApp(MyApp());
@@ -52,7 +55,10 @@ class LoginScreen extends StatelessWidget {
                       SizedBox(height: 10),
                       Text(
                         'Welcome back!',
-                        style: TextStyle(color: Colors.black.withOpacity(0.6), fontSize: 25, fontWeight: FontWeight.normal),
+                        style: TextStyle(
+                            color: Colors.black.withOpacity(0.6),
+                            fontSize: 25,
+                            fontWeight: FontWeight.normal),
                       ),
                     ],
                   ),
@@ -121,19 +127,25 @@ class LoginScreen extends StatelessWidget {
                       width: double.infinity,
                       height: 50,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () => {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const HomePage()))
+                        },
                         child: Text(
                           'Log In',
                           style: TextStyle(color: Colors.white),
                         ),
                         style: ButtonStyle(
-                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25.0),
                             ),
                           ),
                           backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.black),
+                              MaterialStateProperty.all<Color>(Colors.black),
                         ),
                       ),
                     ),
@@ -159,7 +171,12 @@ class LoginScreen extends StatelessWidget {
                         children: <Widget>[
                           Text('Need to make an account? '),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () => {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => SignupScreen()))
+                            },
                             child: Text(
                               'Sign Up?',
                               style: TextStyle(color: Colors.blue),
