@@ -120,7 +120,13 @@ class MyHomePage extends StatelessWidget {
                   color: Colors.transparent,
                   child: Center(
                       child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () => {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const SignupScreen()))
+                            },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.black,
                             padding: const EdgeInsets.symmetric(
